@@ -1,0 +1,15 @@
+version: '2'
+
+services:
+  apache:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    image: posixlee/make_shorten
+    ports:
+      - "8080:80"
+    volumes:
+      - ./html:/var/www/html
+    container_name: make_shorten
+
+
